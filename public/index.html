@@ -7,6 +7,15 @@
   <title>Test websockets page</title>
 </head>
 <body>
-  dd
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    socket = io();
+    socket.on('connect', () => {
+      console.log('we are connected to server');
+    });
+    socket.on('disconnect', () => {
+      console.log('disconnected');
+    });
+  </script>
 </body>
 </html>
