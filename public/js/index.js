@@ -3,7 +3,7 @@ socket = io();
 socket.on('connect', () => {
   console.log('we are connected to server');
   const payload = {from: 'andrew@gmail.com', text: 'works for me'};
-  socket.emit('createMessage', payload);  
+  // socket.emit('createMessage', payload);  
 });
 
 socket.on('disconnect', () => {
